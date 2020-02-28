@@ -1,23 +1,31 @@
-﻿using MediaWorld.Domain.Singletons;
+﻿using System;
 using MediaWorld.Domain.Models;
+using MediaWorld.Domain.Singletons;
+using MediaWorld.Storage.Adapters;
+using MediaWorld.Storage.Repositories;
 
 namespace MediaWorld.Client {
     internal class Program {
+        private static readonly AudioRepository _ar = new AudioRepository();
         private static void Main(string[] args) {
-            Program.PlayAudio();
-            Program.PlayVideo();
+            PlayAudio();
         }
         private static void PlayAudio() {
-            Book book = new Book("Book A");
-            Song song = new Song("Song A");
-            AudioPlayer.Instance.PlayAudio(book);
-            AudioPlayer.Instance.PlayAudio(song);
-        }
-        private static void PlayVideo() {
-            Movie movie = new Movie("Movie A");
-            Photo photo = new Photo("Photo A");
-            VideoPlayer.Instance.PlayVideo(movie);
-            VideoPlayer.Instance.PlayVideo(photo);
+            var ap = AudioPlayer.Instance;
+            var ac = new AudioRepository();
+            try {
+                foreach (var item in ac.List()) {
+                    ap.Play(item);
+                }
+            } catch (NullReferenceException) {
+                System.Console.WriteLine("No playlist for you!");
+            } catch (IndexOutOfRangeException) {
+                System.Console.WriteLine("No song for you!");
+            } catch (Exception err) {
+                throw new Exception("error", err);
+            } finally {
+                GC.Collect();
+            }
         }
     }
 }

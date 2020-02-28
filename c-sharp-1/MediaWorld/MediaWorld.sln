@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaWorld.Testing", "Media
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaWorld.Domain", "MediaWorld.Domain\MediaWorld.Domain.csproj", "{A144B3E2-A3C8-479F-AA82-19DAA587B2EB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaWorld.Storage", "MediaWorld.Storage\MediaWorld.Storage.csproj", "{36FE7D0B-5A35-4DDF-AB3D-52C295DCCDE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,17 @@ Global
 		{A144B3E2-A3C8-479F-AA82-19DAA587B2EB}.Release|x64.Build.0 = Release|Any CPU
 		{A144B3E2-A3C8-479F-AA82-19DAA587B2EB}.Release|x86.ActiveCfg = Release|Any CPU
 		{A144B3E2-A3C8-479F-AA82-19DAA587B2EB}.Release|x86.Build.0 = Release|Any CPU
+		{36FE7D0B-5A35-4DDF-AB3D-52C295DCCDE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36FE7D0B-5A35-4DDF-AB3D-52C295DCCDE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36FE7D0B-5A35-4DDF-AB3D-52C295DCCDE2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{36FE7D0B-5A35-4DDF-AB3D-52C295DCCDE2}.Debug|x64.Build.0 = Debug|Any CPU
+		{36FE7D0B-5A35-4DDF-AB3D-52C295DCCDE2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{36FE7D0B-5A35-4DDF-AB3D-52C295DCCDE2}.Debug|x86.Build.0 = Debug|Any CPU
+		{36FE7D0B-5A35-4DDF-AB3D-52C295DCCDE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36FE7D0B-5A35-4DDF-AB3D-52C295DCCDE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36FE7D0B-5A35-4DDF-AB3D-52C295DCCDE2}.Release|x64.ActiveCfg = Release|Any CPU
+		{36FE7D0B-5A35-4DDF-AB3D-52C295DCCDE2}.Release|x64.Build.0 = Release|Any CPU
+		{36FE7D0B-5A35-4DDF-AB3D-52C295DCCDE2}.Release|x86.ActiveCfg = Release|Any CPU
+		{36FE7D0B-5A35-4DDF-AB3D-52C295DCCDE2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
