@@ -1,14 +1,19 @@
-USE pizzaboxdb;
+USE AdventureWorks2017;
 GO
 
---SELECT
-SELECT NAME 
-FROM Crusts 
-WHERE Price > 0 
-GROUP BY NAME, Price 
-HAVING Price > 1.50
-ORDER BY NAME DESC;
+-- SELECT * 
+-- FROM Person.Person
+-- WHERE FirstName = 'John' OR LastName = 'John';
 
---Order of Execution
--- FROM 
--- 
+-- SELECT LastName 
+-- FROM Person.Person
+-- WHERE LastName = 'Johnson'
+-- GROUP BY LastName;
+
+SELECT SUM(Counting)
+FROM (
+	SELECT COUNT(LastName) AS [Counting]
+	FROM Person.Person
+	GROUP BY LastName
+	HAVING COUNT(*) > 1
+);
