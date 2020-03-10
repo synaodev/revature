@@ -16,4 +16,4 @@ FROM (
 	FROM Person.Person
 	GROUP BY LastName
 	HAVING COUNT(*) > 1
-);
+) AS SummedCount;
