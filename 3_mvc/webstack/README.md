@@ -26,3 +26,9 @@
 
 - https://developer.mozilla.org/en-US/docs/Learn
 - https://schema.org
+
+### model view controller - client
+
+- model = datafiles
+- view = presentation
+- controller = requests
