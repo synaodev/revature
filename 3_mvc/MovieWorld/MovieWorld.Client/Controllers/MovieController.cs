@@ -28,9 +28,11 @@ namespace MovieWorld.Client.Controllers
     [HttpPost]
     public IActionResult Add(MovieModel movie)
     {
-      movies.Add(movie);
-
-      return RedirectToAction("Get");
+      if (ModelState.IsValid) {
+        movies.Add(movie);
+        return RedirectToAction("Get");
+      }
+      return View("Add", movie);
     }
 
     [HttpPut]

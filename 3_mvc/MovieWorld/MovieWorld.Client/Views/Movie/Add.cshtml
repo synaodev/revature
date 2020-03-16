@@ -1,11 +1,19 @@
 @model MovieWorld.Client.Models.MovieModel
 
-<form action="/movie/add" method="post">
-  <label for="title">title</label>
-  <input type="text" name="title1" id="title">
+<form action="/movie/add" method="POST">
+	<label for="title">title</label>
+	<input type="text" name="title1" id="title">
 
-  <label for="genre">genre</label>
-  <input type="text" name="genre1" id="genre">
+	<label for="genre">genre</label>
+	<input type="text" name="genre1" id="genre">
 
-  <button type="submit"></button>
+	<button type="submit"></button>
 </form>
+
+@using(Html.BeginForm("add", "movie")) {
+	Html.LabelFor(mm => mm.Title);
+	Html.TextBoxFor(mm => mm.Title);
+	Html.LabelFor(mm => mm.Genre);
+	Html.TextBoxFor(mm => mm.Genre);
+	<button type="submit">Add</button>
+}
