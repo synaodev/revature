@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 
 namespace MovieWorld.API
 {
@@ -26,6 +27,10 @@ namespace MovieWorld.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSwaggerGen(c => {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Movie API", Version = "v1"});
+            });
+            services.AddCors(o => o.AddDefaultPolicy(p => p.AllowAnyOrigin().AllowAnyMethod()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +44,14 @@ namespace MovieWorld.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Movie API V1");
+            });
 
             app.UseAuthorization();
 
