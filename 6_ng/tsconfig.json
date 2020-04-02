@@ -1,6 +1,8 @@
 {
 	"files": [
-		"ts/app.ts",
-		"ts/event.ts"
-	]
+		"./ts/app.ts",
+		"./ts/event.ts"
+	],
+	"rootDir": "./ts",
+	"outDir": "./ts/dist"
 }
