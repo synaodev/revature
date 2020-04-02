@@ -1,0 +1,6 @@
+{
+	"files": [
+		"ts/app.ts",
+		"ts/event.ts"
+	]
+}
