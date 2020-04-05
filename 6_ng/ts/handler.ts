@@ -1,24 +1,25 @@
+import Result from './result';
+
 export function success(res: Response) {
-	let textarea: any = document.querySelector("#response");
+	let textarea: any = document.querySelector('#response');
 	res.json().then(
-		function(data) {
-			let obj: any = {
-				detail: null,
-				name: null,
-				mass: null
+		function(data: Result) {
+			let obj: Result = {
+				detail: 'null',
+				name: 'null',
+				mass: 0
 			};
-			for (const key in obj) {
-				obj[key] = data[key];
-			}
+			obj = data;
 			textarea.value = obj;
 			console.log(obj);
 		},
-		function(error) {
-			textarea.value = "ERROR";
+		function(error: Response) {
+			textarea.value = 'ERROR';
 		}
-	)
+	);
 }
+
 export function failure(res: Response) {
-	let textarea: any = document.querySelector("#response");
-	textarea.value = "ERROR";
+	let textarea: any = document.querySelector('#response');
+	textarea.value = 'ERROR';
 }

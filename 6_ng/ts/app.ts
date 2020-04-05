@@ -1,6 +1,6 @@
-import { EventHandler } from "./event";
+import EventHandler from './event';
 
-let main = document.querySelector("main");
-let eh = new EventHandler();
+let main: any = document.querySelector('main');
+let eh: EventHandler = new EventHandler();
 
-main.addEventListener("click", eh.Click);
+main.addEventListener('click', eh.Click);

@@ -1,18 +1,21 @@
 {
-  "name": "revature",
+  "name": "6_ng",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "nodemon index.js",
-    "ng": "ng"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -a 0.0.0.0 ."
   },
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.12.1",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
   "dependencies": {
-    "@angular/cli": "^9.1.0",
-    "express": "^4.17.1",
-    "nodemon": "^2.0.2",
-    "typescript": "^3.8.3"
+    "@angular/cli": "^9.1.0"
   }
 }
