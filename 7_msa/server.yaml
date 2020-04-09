@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: deployment
+name: server-deployment-yaml
+metadata:
+  label: server-yaml
+spec:
+  container:
+    image: nginx
+
+---
+apiVersion: apps/v1beta1
+kind: service
+name: server-service
